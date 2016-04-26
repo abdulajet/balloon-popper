@@ -18,10 +18,26 @@ class HowScene: SKScene {
 
     
     override func didMoveToView(view: SKView) {
+        //check if 4s and change bg size
+        let screenSize =  UIScreen.mainScreen().bounds
+        if (screenSize.height == 480 && screenSize.width == 320){
+            bg.size = CGSizeMake(frame.width - 500, frame.height)
+            
+            
+        }else{
+            bg.setScale(0.7)
+        }
+        
+        bg.position = CGPointMake(frame.width / 2, frame.height / 2)
+        bg.zPosition = -1
+        bg.alpha = 1
+        
+        self.addChild(bg)
+        
         
         text = SKLabelNode(text: "Pop the balloons to relieve stress!")
         text2 = SKLabelNode(text: "When balloons are popped they play a piano note!")
-        text3 = SKLabelNode(text: "The higher the ballon is on screen, the higher the note.")
+        text3 = SKLabelNode(text: "The higher the balloon is on screen, the higher the note.")
         text4 = SKLabelNode(text: "P.S. use 3D touch to control the volume!")
         
         text.position = CGPointMake(frame.width / 2, frame.width / 2 + 100)
@@ -33,6 +49,12 @@ class HowScene: SKScene {
         text2.fontSize = 20
         text3.fontSize = 20
         text4.fontSize = 20
+        
+        
+        text.fontColor = UIColor.blackColor()
+        text2.fontColor = UIColor.blackColor()
+        text3.fontColor = UIColor.blackColor()
+        text4.fontColor = UIColor.blackColor()
 
         self.addChild(text)
         self.addChild(text2)

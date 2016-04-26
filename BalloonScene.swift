@@ -16,6 +16,11 @@ class BalloonScene: SKScene {
     var blockSize: CGFloat = 0
     var sound:AVAudioPlayer = AVAudioPlayer()
     let bg = SKSpriteNode(imageNamed: "bg")
+    let backBtn = SKSpriteNode(imageNamed: "quitBtn")
+
+    
+    var balloonSpeed: CGFloat = 0.0
+    var spawnTimer = 0.0
     
     
     override func didMoveToView(view: SKView) {
@@ -27,7 +32,6 @@ class BalloonScene: SKScene {
         //check if 4s and change bg size
         let screenSize =  UIScreen.mainScreen().bounds
         if (screenSize.height == 480 && screenSize.width == 320){
-            print("4s")
             bg.size = CGSizeMake(frame.width - 500, frame.height)
             
             
@@ -36,19 +40,48 @@ class BalloonScene: SKScene {
         }
         
         bg.position = CGPointMake(frame.width / 2, frame.height / 2)
-        bg.zPosition = -1
+        bg.zPosition = -2
         bg.alpha = 1
         
         self.addChild(bg)
         
         
-        _ = NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(BalloonScene.playGame), userInfo: nil, repeats: true)
+        //if it is 6s Plus
+        if (screenSize.height == 736 && screenSize.width == 414){
+            balloonSpeed = 5
+            spawnTimer = 4
+        }else{
+            balloonSpeed = 2
+            spawnTimer = 2
+        }
+        
+        
+        
+        backBtn.position = CGPointMake(frame.width / 2 + 185, frame.height / 2 + 355)
+        backBtn.zPosition = -1
+        backBtn.setScale(0.5)
+        self.addChild(backBtn)
+        
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(spawnTimer, target: self, selector: #selector(BalloonScene.playGame), userInfo: nil, repeats: true)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         /* Called when a touch begins */
         for touch in touches {
-            //let location = touch.locationInNode(self)
+            let location = touch.locationInNode(self)
+            
+            if nodeAtPoint(location) == backBtn {
+                
+                
+                let transition = SKTransition.fadeWithDuration(1)
+                
+                let scene = GameScene(size: self.size)
+                scene.scaleMode = SKSceneScaleMode.AspectFill
+                
+                self.view?.presentScene(scene, transition: transition)
+                
+            }
             
         }
         
@@ -77,7 +110,7 @@ class BalloonScene: SKScene {
         
         for i in 0 ..< balloons.count{
             if (balloons[i].position.y < frame.height + 100) {
-                balloons[i].position.y += 2
+                balloons[i].position.y += balloonSpeed
             }
         }
         
@@ -209,11 +242,11 @@ class BalloonScene: SKScene {
     }
     
     func inRange(val: CGFloat) -> CGFloat {
-        
-        if (val < 1){
+        print(val)
+        if (val < 2){
+            return 0.1
+        } else if (val > 2 && val < 4.5){
             return 0.3
-        } else if (val > 1 && val < 3){
-            return 0.6
         }else{
             return 1
         }
