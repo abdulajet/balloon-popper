@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41766C3B1CCB967900F39187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41766C3A1CCB967900F39187 /* AppDelegate.swift */; };
-		41766C3D1CCB967900F39187 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 41766C3C1CCB967900F39187 /* GameScene.sks */; };
 		41766C411CCB967900F39187 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41766C401CCB967900F39187 /* GameViewController.swift */; };
-		41766C441CCB967900F39187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41766C421CCB967900F39187 /* Main.storyboard */; };
 		41766C491CCB967900F39187 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41766C471CCB967900F39187 /* LaunchScreen.storyboard */; };
 		41766C5B1CCC6B2C00F39187 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41766C531CCC6B2C00F39187 /* a.wav */; };
 		41766C5C1CCC6B2C00F39187 /* b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41766C541CCC6B2C00F39187 /* b.wav */; };
@@ -22,16 +20,14 @@
 		41766C621CCC6B2C00F39187 /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 41766C5A1CCC6B2C00F39187 /* g.wav */; };
 		41766C641CCCB3DA00F39187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41766C631CCCB3DA00F39187 /* Assets.xcassets */; };
 		41766C6A1CCCC0EA00F39187 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41766C691CCCC0EA00F39187 /* GameScene.swift */; };
-		41766C6C1CCCC5F400F39187 /* HowScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41766C6B1CCCC5F400F39187 /* HowScene.swift */; };
-		41E2248C1CCE5F4200AE8E6B /* BalloonScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E2248B1CCE5F4200AE8E6B /* BalloonScene.swift */; };
+		41E7671B2063294B005E1891 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 41E7671A2063294B005E1891 /* GameScene.sks */; };
+		41E7671D20632A68005E1891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41E7671C20632A68005E1891 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		41766C371CCB967900F39187 /* XtremeBalloonPopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XtremeBalloonPopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41766C3A1CCB967900F39187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41766C3C1CCB967900F39187 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		41766C401CCB967900F39187 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		41766C431CCB967900F39187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41766C481CCB967900F39187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41766C4A1CCB967900F39187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41766C531CCC6B2C00F39187 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
@@ -44,8 +40,8 @@
 		41766C5A1CCC6B2C00F39187 /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		41766C631CCCB3DA00F39187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41766C691CCCC0EA00F39187 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		41766C6B1CCCC5F400F39187 /* HowScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HowScene.swift; path = ../HowScene.swift; sourceTree = "<group>"; };
-		41E2248B1CCE5F4200AE8E6B /* BalloonScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BalloonScene.swift; path = ../BalloonScene.swift; sourceTree = "<group>"; };
+		41E7671A2063294B005E1891 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		41E7671C20632A68005E1891 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +75,11 @@
 			isa = PBXGroup;
 			children = (
 				41766C521CCC68F100F39187 /* Sounds */,
-				41E2248B1CCE5F4200AE8E6B /* BalloonScene.swift */,
 				41766C691CCCC0EA00F39187 /* GameScene.swift */,
-				41766C6B1CCCC5F400F39187 /* HowScene.swift */,
+				41E7671A2063294B005E1891 /* GameScene.sks */,
 				41766C401CCB967900F39187 /* GameViewController.swift */,
 				41766C3A1CCB967900F39187 /* AppDelegate.swift */,
-				41766C3C1CCB967900F39187 /* GameScene.sks */,
-				41766C421CCB967900F39187 /* Main.storyboard */,
+				41E7671C20632A68005E1891 /* Main.storyboard */,
 				41766C471CCB967900F39187 /* LaunchScreen.storyboard */,
 				41766C4A1CCB967900F39187 /* Info.plist */,
 				41766C631CCCB3DA00F39187 /* Assets.xcassets */,
@@ -142,10 +136,11 @@
 					41766C361CCB967800F39187 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = BQ9D43VRKA;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
-			buildConfigurationList = 41766C321CCB967800F39187 /* Build configuration list for PBXProject "AbdulhakimAjetunmobi" */;
+			buildConfigurationList = 41766C321CCB967800F39187 /* Build configuration list for PBXProject "XtremeBalloonPopper" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -171,13 +166,13 @@
 				41766C621CCC6B2C00F39187 /* g.wav in Resources */,
 				41766C611CCC6B2C00F39187 /* f.wav in Resources */,
 				41766C5D1CCC6B2C00F39187 /* c octv.wav in Resources */,
-				41766C3D1CCB967900F39187 /* GameScene.sks in Resources */,
+				41E7671D20632A68005E1891 /* Main.storyboard in Resources */,
 				41766C491CCB967900F39187 /* LaunchScreen.storyboard in Resources */,
+				41E7671B2063294B005E1891 /* GameScene.sks in Resources */,
 				41766C5F1CCC6B2C00F39187 /* d.wav in Resources */,
 				41766C5E1CCC6B2C00F39187 /* c.wav in Resources */,
 				41766C601CCC6B2C00F39187 /* e.wav in Resources */,
 				41766C5C1CCC6B2C00F39187 /* b.wav in Resources */,
-				41766C441CCB967900F39187 /* Main.storyboard in Resources */,
 				41766C641CCCB3DA00F39187 /* Assets.xcassets in Resources */,
 				41766C5B1CCC6B2C00F39187 /* a.wav in Resources */,
 			);
@@ -190,10 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41766C6C1CCCC5F400F39187 /* HowScene.swift in Sources */,
 				41766C411CCB967900F39187 /* GameViewController.swift in Sources */,
 				41766C6A1CCCC0EA00F39187 /* GameScene.swift in Sources */,
-				41E2248C1CCE5F4200AE8E6B /* BalloonScene.swift in Sources */,
 				41766C3B1CCB967900F39187 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		41766C421CCB967900F39187 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41766C431CCB967900F39187 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		41766C471CCB967900F39187 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,11 +294,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BQ9D43VRKA;
 				INFOPLIST_FILE = XtremeBalloonPopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.5to9studios.XtremeBalloonPopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdulajet.XtremeBalloonPopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -323,18 +310,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BQ9D43VRKA;
 				INFOPLIST_FILE = XtremeBalloonPopper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.5to9studios.XtremeBalloonPopper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abdulajet.XtremeBalloonPopper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41766C321CCB967800F39187 /* Build configuration list for PBXProject "AbdulhakimAjetunmobi" */ = {
+		41766C321CCB967800F39187 /* Build configuration list for PBXProject "XtremeBalloonPopper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41766C4B1CCB967900F39187 /* Debug */,
