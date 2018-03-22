@@ -100,7 +100,7 @@
 				41766C5A1CCC6B2C00F39187 /* g.wav */,
 			);
 			name = Sounds;
-			path = ..;
+			path = ../sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
