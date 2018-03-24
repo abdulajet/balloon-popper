@@ -8,8 +8,9 @@
 
 import UIKit
 import SpriteKit
+import ARKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, ARSKViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +28,8 @@ class GameViewController: UIViewController {
             scene.scaleMode = .aspectFill
             
             skView.presentScene(scene)
+        } else if let scene = Scene(fileNamed: "Scene"){
+            scene.view?.delegate = self
         }
-    }
-
-    override var shouldAutorotate : Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override var prefersStatusBarHidden : Bool {
-        return true
     }
 }

@@ -8,13 +8,16 @@
 
 import SpriteKit
 import AVFoundation
+import ARKit
 
 class GameScene: SKScene {
     var endGame = false
     var balloons = [SKSpriteNode]()
     var blockSize: CGFloat = 0
-    var sound:AVAudioPlayer = AVAudioPlayer()
+    var sound: AVAudioPlayer = AVAudioPlayer()
     let bg = SKSpriteNode(imageNamed: "bg")
+    let arBtn = SKSpriteNode(imageNamed: "quitBtn")
+    
     
     var balloonSpeed: CGFloat = 0.0
     var spawnTimer = 0.0
@@ -36,7 +39,13 @@ class GameScene: SKScene {
         bg.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
         bg.zPosition = -2
         bg.alpha = 1
-        self.addChild(bg)
+        addChild(bg)
+        
+        arBtn.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        
+        if (ARConfiguration.isSupported) {
+            //addChild(arBtn)
+        }
         
         //if it is 6s Plus
         if (screenSize.height == 736 && screenSize.width == 414){
@@ -50,7 +59,7 @@ class GameScene: SKScene {
         _ = Timer.scheduledTimer(timeInterval: spawnTimer, target: self, selector: #selector(self.playGame), userInfo: nil, repeats: true)
     }
     
- override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             let location = touches.first!.location(in: self)
             
@@ -82,38 +91,25 @@ class GameScene: SKScene {
     
     func spawnBalloon(){
         let track = arc4random_uniform(3)
-        let colour = arc4random_uniform(4)
+        let colour = arc4random_uniform(4) + 1
         
-        var sprite = SKSpriteNode()
-        
-        switch colour {
-        case 0:
-            sprite = SKSpriteNode(imageNamed: "redBalloon")
-        case 1:
-            sprite = SKSpriteNode(imageNamed: "greenBalloon")
-        case 2:
-            sprite = SKSpriteNode(imageNamed: "purpleBalloon")
-        case 3:
-            sprite = SKSpriteNode(imageNamed: "blueBalloon")
-        default:
-            break
-        }
+        let sprite = SKSpriteNode(imageNamed: "b\(colour)")
         
         switch track {
         case 0:
             sprite.position = CGPoint(x: frame.width / 2, y: -10.0)
             sprite.setScale(0.2)
-            self.addChild(sprite)
+            addChild(sprite)
             balloons.append(sprite)
         case 1:
             sprite.position = CGPoint(x: frame.width / 2 + 150, y: -10.0)
             sprite.setScale(0.2)
-            self.addChild(sprite)
+            addChild(sprite)
             balloons.append(sprite)
         case 2:
             sprite.position = CGPoint(x: frame.width / 2 - 150, y: -10.0)
             sprite.setScale(0.2)
-            self.addChild(sprite)
+            addChild(sprite)
             balloons.append(sprite)
         default:
             break
