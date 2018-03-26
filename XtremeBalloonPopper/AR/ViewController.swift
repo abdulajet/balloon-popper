@@ -57,13 +57,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
         let balloonId = randomInt(min: 1, max: 4)
         let balloon = SKSpriteNode(imageNamed: "b\(balloonId)")
         balloon.name = "balloon"
-        balloon.setScale(0.3)
-        
-        let moveUP =  SKAction.move(to: CGPoint(x: balloon.position.x, y: view.bounds.maxY), duration: 10)
-        
-        let moveUPForever = SKAction.repeatForever(moveUP)
-        
-        balloon.run(moveUPForever)
+        balloon.setScale(0.01)
         
         return balloon
     }

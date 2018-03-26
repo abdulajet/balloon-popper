@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class GameViewController: UIViewController, ARSKViewDelegate {
+class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,6 @@ class GameViewController: UIViewController, ARSKViewDelegate {
             scene.scaleMode = .aspectFill
             
             skView.presentScene(scene)
-        } else if let scene = Scene(fileNamed: "Scene"){
-            scene.view?.delegate = self
         }
     }
 }

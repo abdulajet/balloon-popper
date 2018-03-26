@@ -8,7 +8,6 @@
 
 import SpriteKit
 import AVFoundation
-import ARKit
 
 class GameScene: SKScene {
     var endGame = false
@@ -16,8 +15,6 @@ class GameScene: SKScene {
     var blockSize: CGFloat = 0
     var sound: AVAudioPlayer = AVAudioPlayer()
     let bg = SKSpriteNode(imageNamed: "bg")
-    let arBtn = SKSpriteNode(imageNamed: "quitBtn")
-    
     
     var balloonSpeed: CGFloat = 0.0
     var spawnTimer = 0.0
@@ -40,12 +37,6 @@ class GameScene: SKScene {
         bg.zPosition = -2
         bg.alpha = 1
         addChild(bg)
-        
-        arBtn.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
-        
-        if (ARConfiguration.isSupported) {
-            //addChild(arBtn)
-        }
         
         //if it is 6s Plus
         if (screenSize.height == 736 && screenSize.width == 414){
@@ -102,12 +93,12 @@ class GameScene: SKScene {
             addChild(sprite)
             balloons.append(sprite)
         case 1:
-            sprite.position = CGPoint(x: frame.width / 2 + 150, y: -10.0)
+            sprite.position = CGPoint(x: frame.width / 2 + 130, y: -10.0)
             sprite.setScale(0.2)
             addChild(sprite)
             balloons.append(sprite)
         case 2:
-            sprite.position = CGPoint(x: frame.width / 2 - 150, y: -10.0)
+            sprite.position = CGPoint(x: frame.width / 2 - 130, y: -10.0)
             sprite.setScale(0.2)
             addChild(sprite)
             balloons.append(sprite)
@@ -171,4 +162,3 @@ class GameScene: SKScene {
         }
     }
 }
-

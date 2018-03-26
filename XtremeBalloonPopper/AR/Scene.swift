@@ -25,7 +25,7 @@ class Scene: SKScene {
     func spawnBalloon(currentTime: TimeInterval) {
         if currentTime > creationTime {
             createBalloonAnchor()
-            creationTime = currentTime + TimeInterval(randomFloat(min: 3.0, max: 6.0))
+            creationTime = currentTime + TimeInterval(randomFloat(min: 2.0, max: 6.0))
         }
     }
     
@@ -45,7 +45,7 @@ class Scene: SKScene {
         let rotateY = simd_float4x4(SCNMatrix4MakeRotation(_360degrees * randomFloat(min: 0.0, max: 1.0), 0, 1, 0))
         let rotation = simd_mul(rotateX, rotateY)
         var translation = matrix_identity_float4x4
-        translation.columns.3.z = -1 - randomFloat(min: 2.0, max: 3.0)
+        translation.columns.3.z = -3 - randomFloat(min: 0.0, max: 1.0)
         let transform = simd_mul(rotation, translation)
         
         let anchor = ARAnchor(transform: transform)
@@ -53,24 +53,24 @@ class Scene: SKScene {
     }
     
     func getSound() -> SKAction {
-        let soundNum = randomInt(min: 1, max: 8)
+        let soundNum = randomInt(min: 0, max: 7)
         
         switch soundNum {
-        case 1:
+        case 0:
             return SKAction.playSoundFileNamed("b", waitForCompletion: false)
-        case 2:
+        case 1:
             return SKAction.playSoundFileNamed("c octv", waitForCompletion: false)
-        case 3:
+        case 2:
             return SKAction.playSoundFileNamed("c", waitForCompletion: false)
-        case 4:
+        case 3:
             return SKAction.playSoundFileNamed("d", waitForCompletion: false)
-        case 5:
+        case 4:
             return SKAction.playSoundFileNamed("e", waitForCompletion: false)
-        case 6:
+        case 5:
             return SKAction.playSoundFileNamed("a", waitForCompletion: false)
-        case 7:
+        case 6:
             return SKAction.playSoundFileNamed("f", waitForCompletion: false)
-        case 8:
+        case 7:
             return SKAction.playSoundFileNamed("g", waitForCompletion: false)
         default:
             return SKAction.playSoundFileNamed("b", waitForCompletion: false)
